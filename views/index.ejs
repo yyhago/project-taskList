@@ -58,15 +58,13 @@
                 <a id="close" href="/"><i class="bi bi-x-circle"></i></a>
                 <h2>ATENÇÃO!</h2>
                 <hr>
-                <p>Apagar tarefa? : <%= taskDele.task %></p>
+                <p>Apagando Tarefa: <%= taskDele.task %></p>
                 <form action="/deleteOne/<%= taskDele._id %>" method="post">
                     <button id="btnConfir" type="submit">Confirmar ação</button>
                 </form>
             </div>
         </section>
-        <% } %>
-        
-
+    <% } %>
     <script src="script.js"></script>
 </body>
 </html>

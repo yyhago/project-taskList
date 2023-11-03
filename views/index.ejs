@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <title>Task List - Lista de Tarefas</title>
 </head>
 <body>
 
     <header>
         <% if (task == null) { %>
+            <h1>Task List</h1>
+            <span>O melhor lugar para <b>organização de tarefas</b> é aqui!</span>
         <form action="/create" method="post">
-            <input type="text" name="task" id="task" placeholder="Adicionar Tarefa">
+            <input type="text" name="task" id="task" placeholder="Adicionar Tarefa...">
             <button id="addButton" type="submit">Adicionar</button>
         </form>
         <% } else { %>
+            <h1>Atualizando Tarefa...</h1>
+            <span>Atualize sua tarefa e adicione novamente!</span>
         <form action="/updateOne/<%= task._id %>" method="post">
             <input type="text" name="task" id="task" value="<%= task.task %>">
-            <button id="addButton" type="submit">Atualizar</button>
+            <button id="updateButton" type="submit">Atualizar</button>
         </form>
         <% } %>
     </header>

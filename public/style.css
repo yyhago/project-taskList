@@ -17,7 +17,6 @@ header{
     padding: 1.5rem;
     text-align: center;
     background-color: #3DADD9;
-    border-radius: 88px 17px 89px 17px;
     border: 4px solid #ffffff;
 }
 
@@ -54,10 +53,213 @@ button{
     outline: 0;
     background-color: #03588C;
     cursor: pointer;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 button:hover{
     background-color: #fff;
     color:#03588C;
+}
+
+
+section#tasks{
+    margin: .5rem;
+}
+
+ul{
+    list-style: none;
+}
+
+ul li {
+    position: relative;
+    padding:.5rem;
+    background-color:#093b4f;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+    border-radius: 7px 7px 0 0 ;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding-left: 2rem;
+}
+
+ul li span{
+    color: #03588C;
+    font-style: italic;
+    font-size: .8rem;
+    padding-left: 1rem;
+}
+
+ul li div{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+ul li:nth-child(odd){
+    background-color:#38718e;
+}
+
+ul li:hover{
+    background-color: #012340;
+}
+
+a.btnUpdate{
+    padding: .5rem;
+    text-decoration: none;
+    color: #ccc;
+    transition: all 1s;
+    margin-right: 10px;
+}
+
+a.btnUpdate:hover{
+    background-color: #0558a1;
+    color: #fff;
+}
+
+a.btnDelete{
+    padding: .5rem;
+    text-decoration: none;
+    color: #ccc;
+    transition: all 1s;
+    margin-right: 10px;
+}
+
+a.btnDelete:hover{
+    background-color: #a10505;
+    color: #fff;
+}
+
+section#modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #093b4f80;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+}
+
+#card{
+    max-width:50rem;
+    position: relative;
+    background-color: #0558a1;
+    flex-wrap: wrap;
+    border-radius: 7px;
+    white-space: nowrap;
+    overflow: hidden; 
+}
+
+#card h2{
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+}
+
+#card p{
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+#card hr{
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+#close{
+    position: absolute;
+    margin-right: 40px;
+    margin: 5px;
+    font-size: 24px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#btnConfir{
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    background-color:#5393ba;
+    flex-wrap: wrap;
+    color: #fff;
+}
+
+#btnConfir:hover{
+    background-color:#32688a;
+}
+
+.message{
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    text-align: center;
+    font-size: 1.1rem;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.message-Danger{
+    background-color: rgb(255, 197, 197);
+    color: #ffffff;
+}
+
+.message-Success{
+    background-color: rgb(197, 255, 214);
+    color: rgb(255, 255, 255);
+}
+
+span#close-message{
+    font-size: 2rem;
+    cursor: pointer;
+    padding-left: 2rem;
+}
+
+
+ul li.check-true{
+    background-color: #888888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+ul li a.check-true::before{
+    content: "";
+    position: absolute;
+    border: #fff solid;
+    top:17px;
+    left: 16px;
+    height: 15px;
+    width: 7px;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+ul li a.check-false::before{
+    content: "";
+    position: absolute;
+    border: #fff solid;
+    top:19px;
+    left: 16px;
+    height: 13px;
+    width: 13px;
+    border-width: 2px;
+
 }
